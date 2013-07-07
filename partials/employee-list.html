@@ -1,0 +1,50 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span7">
+      <!--Sidebar content-->
+
+      Search: <input ng-model="query">
+      Sort by:
+      <select ng-model="orderProp">
+        <option value="emp_name">Name</option>
+        <option value="dept_code">Dept</option>
+        <option value="pos_code">POS</option>
+        <option value="duty_code">Duty</option>
+        <option value="join_date">Join date</option>
+      </select>
+
+      <table class="table">
+        <tr>
+          <th class="span2">Name</th>
+          <th class="span1">Pos.</th>
+          <th class="span2">Duty.</th>
+          <th class="span2">Dept.</th>
+          <th class="span3">Email</th>
+          <th class="span2">Mobile</th>
+        </tr>
+        <tr ng-repeat="employee in employees | filter:query | orderBy:orderProp" ng-animate=" 'animate' ">
+          <td class="span2"><a href="#/employees/{{employee.emp_id}}">{{employee.emp_name}}</a></td>
+          <td class="span1">{{employee.pos_name}}</td>
+          <td class="span2">{{employee.duty_name}}</td>
+          <td class="span2">{{employee.dept_name}}</td>
+          <td class="span3">{{employee.email}}</td>
+          <td class="span2">{{employee.mobile}}</td>
+        </tr>
+      </table>
+      <!-- <a href="#/employees/employee.php?emp_id={{employee.emp_id}}" class="thumb"><img ng-src="./emp_images/{{employee.emp_id}}.jpg"></a>  -->
+    </div>
+    <div class="span5">
+      <h4>Birthday Info.</h4>
+      <table class="table">
+        <tr>
+          <th class="span2">Name</th>
+          <th class="span2">birthday</th>
+        </tr>
+        <tr ng-repeat="employee in employees | filter:filterByNotBirth | orderBy:'birth_md'" ng-animate=" 'animate' ">
+          <td class="span2"><a href="#/employees/{{employee.emp_id}}">{{employee.emp_name}}</a></td>
+          <td class="span2">{{employee.birth_md}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

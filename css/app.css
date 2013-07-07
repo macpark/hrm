@@ -1,0 +1,183 @@
+ app css stylesheet */
+
+body {
+  padding-top: 20px;
+}
+
+.employees {
+  list-style: none;
+}
+
+.thumb {
+  float: left;
+  margin: -1em 1em 1.5em 0em;
+  padding-bottom: 1em;
+  height: 100px;
+  width: 100px;
+}
+
+.employees li {
+  clear: both;
+  height: 18px;
+  padding-top: 10px;
+  /*margin: -1em 1em 1.5em 0em;*/
+}
+
+/** Detail View **/
+img.employee {
+  float: left;
+  border: 1px solid black;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  background-color: white;
+  padding: 1em;
+  height: 150px;
+  width: 150px;
+}
+
+ul.employee-thumbs {
+  margin: 0;
+  list-style: none;
+}
+
+ul.employee-thumbs li {
+  border: 1px solid black;
+  display: inline-block;
+  margin: 1em;
+  background-color: white;
+}
+
+ul.employee-thumbs img {
+  height: 100px;
+  width: 100px;
+  padding: 1em;
+}
+
+ul.employee-thumbs img:hover {
+  cursor: pointer;
+}
+
+
+ul.specs {
+  clear: both;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul.specs > li{
+  display: inline-block;
+  width: 200px;
+  vertical-align: top;
+}
+
+ul.specs > li > span{
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+ul.specs dt {
+  font-weight: bold;
+}
+
+h1 {
+  border-bottom: 1px solid gray;
+}
+
+
+/*animate MOVE RIGHT*/
+.animate-enter-setup, 
+.animate-leave-setup
+{ 
+    -webkit-transition: 400ms cubic-bezier(0.445, 0.050, 0.550, 0.950) all;
+    -moz-transition: 400ms cubic-bezier(0.445, 0.050, 0.550, 0.950) all;
+    -ms-transition: 400ms cubic-bezier(0.445, 0.050, 0.550, 0.950) all;
+    -o-transition: 400ms cubic-bezier(0.445, 0.050, 0.550, 0.950) all;
+    transition: 400ms cubic-bezier(0.445, 0.050, 0.550, 0.950) all;
+    position: relative;
+    display: block;
+} 
+ 
+.animate-enter-setup.animate-enter-start, 
+.animate-leave-setup {
+    opacity: 1;
+    right: 0;
+    height: 18px;
+}
+ 
+.animate-leave-setup.animate-leave-start,
+.animate-enter-setup {
+    opacity: 0;
+    right: -300px;
+    height: 0px;
+}
+
+
+/*animate SCALE X*/
+/*.animate-enter-setup, 
+.animate-leave-setup { 
+    -webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    position: relative;
+    display: block;
+} 
+ 
+.animate-leave-setup.animate-leave-start,
+.animate-enter-setup {
+    -webkit-transform: scaleY(0);
+    -moz-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    transform: scaleY(0);
+    height: 0px;
+    opacity: 0;
+}
+ 
+.animate-enter-setup.animate-enter-start,
+.animate-leave-setup {
+    -webkit-transform: scaleY(1);
+    -moz-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    transform: scaleY(1);
+    height: 100px;
+    opacity: 1;
+}*/
+
+/*animate SCALE X-Y*/
+/*
+.animate-enter-setup, 
+.animate-leave-setup { 
+    -webkit-transition: 400ms cubic-bezier(0.250, 0.100, 0.250, 1.000) all;
+    -moz-transition: 400ms cubic-bezier(0.250, 0.100, 0.250, 1.000) all;
+    -ms-transition: 400ms cubic-bezier(0.250, 0.100, 0.250, 1.000) all;
+    -o-transition: 400ms cubic-bezier(0.250, 0.100, 0.250, 1.000) all;
+    transition: 400ms cubic-bezier(0.250, 0.100, 0.250, 1.000) all;
+    position: relative;
+    display: block;
+} 
+ 
+.animate-leave-setup.animate-leave-start,
+.animate-enter-setup {
+    -webkit-transform: scaleY(0.1) scaleX(0.1);
+    -moz-transform: scaleY(0.1) scaleX(0.1);
+    -ms-transform: scaleY(0.1) scaleX(0.1);
+    -o-transform: scaleY(0.1) scaleX(0.1);
+    transform: scaleY(0.1) scaleX(0.1);
+    height: 0px;
+    opacity: 0;
+}
+ 
+.animate-enter-setup.animate-enter-start,
+.animate-leave-setup {
+    -webkit-transform: scaleY(1) scaleX(1);
+    -moz-transform: scaleY(1) scaleX(1);
+    -ms-transform: scaleY(1) scaleX(1);
+    -o-transform: scaleY(1) scaleX(1);
+    transform: scaleY(1) scaleX(1);
+    height: 100px;
+    opacity: 1;
+}
